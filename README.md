@@ -1,24 +1,178 @@
-# Hi, I'm Danial 👋
+<h1 align="center">Danial Parviz</h1>
 
-Senior Computer Engineering student at **UT Dallas** (graduating May 2027), focused on
-**embedded systems, FPGA acceleration, and hardware-software integration**.
-Two-time **NASA L'SPACE** alumnus.
+<p align="center">
+  <b>Computer Engineering @ UT Dallas</b> · Class of May 2027 · 2x NASA L'SPACE Alumnus<br>
+  Embedded systems · FPGA acceleration · Avionics · Hardware-software integration
+</p>
 
-## What I work on
-- 🔧 **FPGA & accelerator systems**: Python runtime for a Zynq UltraScale+ accelerator at
-  UTD's EACAS Lab *(research code is in a private lab repository)*
-- 🚀 **Avionics**: flight computer and GPS telemetry for a Level 3 rocket (AIAA Comet Rocketry)
-- 🤖 **Rover electronics**: power and CAN bus systems for NASA Lunabotics
-- 🛰️ **NASA L'SPACE**: CDH systems engineer (Mission Concept Academy), proposal
-  engineer (NPWEE)
+<p align="center">
+  <a href="https://www.linkedin.com/in/danial-parviz-5075a2212/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="mailto:dxp210034@utdallas.edu"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
+  <img src="https://img.shields.io/badge/Seeking-Summer%202027%20Internships%20%26%20Full--Time-2ea44f?style=flat-square" alt="Seeking">
+</p>
 
-## Skills
-**Languages:** Python · C/C++ · Verilog/SystemVerilog · VHDL · MATLAB
-**Hardware:** Vivado · Altium · KiCad · LTSpice · ESP32 · Jetson Nano
-**Protocols:** AXI4-Lite · DMA · SPI · I2C · UART · CAN · LoRa
+---
 
-## Reach me
-[LinkedIn](https://www.linkedin.com/in/danial-parviz-5075a2212/) · dxp210034@utdallas.edu
+## 👋 About
 
-*Looking for Summer 2027 internships and full-time roles in embedded systems, FPGA, avionics, and aerospace/defense.*
+Senior Computer Engineering student who works where hardware meets software: FPGA accelerator
+runtimes, flight avionics, rover electronics, and embedded AI. I'm looking for **Summer 2027
+internships and full-time roles** in embedded systems, FPGA engineering, avionics, and
+aerospace/defense.
 
+## 🔭 Currently working on
+
+| | Project | Where |
+|---|---|---|
+| 🔧 | Python runtime for a Zynq UltraScale+ FPGA accelerator *(private lab repo)* | EACAS Lab, UTD |
+| 🚀 | Level 3 rocket flight computer and GPS/LoRa telemetry | AIAA Comet Rocketry |
+| 🛰️ | Communications, navigation & tracking proposal (orbital debris, NEO Surveyor) | NASA L'SPACE NPWEE |
+| 🧠 | Embedded predictive digital twin for multi-rail power systems | Senior Design (Team Nexus 6) |
+| 🔒 | Open-source MCP server security scanner | GDSC sprint team |
+| 🌐 | End-to-end IoT / edge AI capstone | UTD IoT Laboratory |
+
+---
+
+## 🔬 Research
+
+### EACAS Lab, UT Dallas · Undergraduate Research Assistant
+*Efficient AI Computing and Accelerator Systems, under Dr. Mohamed Ibrahim*
+
+- Lead the **ARM-side Python runtime** for a Zynq UltraScale+ ZCU102 FPGA accelerator used in a real-time turbulence digital twin: AXI4-Lite register access, DMA (MM2S/S2MM) data movement, kernel table loading, timeout handling, and typed error surfaces
+- Built a **software mock backend** (register file, kernel-load state machine, DMA loopback, failure injection) so the full pipeline could be developed before hardware access
+- **8 pull requests, 2,500+ lines** of production Python; test suite grown from **0 to 30** unit and integration tests
+- Numerical validation against **DOLFIN (FEniCS)** and **Incompact3d** at **2×10⁻⁵ relative L2 tolerance** across Kolmogorov flow and cylinder wake cases
+- Adapted the runtime through a mid-project data format change with zero regressions; authored developer docs for hardware integration
+
+*Code lives in a private lab repository; the team is working toward publication.*
+
+---
+
+## 🚀 Aerospace & NASA
+
+### AIAA Comet Rocketry · UT Dallas
+
+**L3 Flight Computer & GPS Systems Engineer** · Fall 2026 – Present
+- Researching and proposing an upgraded flight computer around the **STM32H743 (Cortex-M7)**: hardware FPU for Kalman-filter sensor fusion, integrated FDCAN, and dedicated SPI buses to move sensors off a shared I2C bus
+- Sensor suite selection, **IREC 2026 DTEG** compliance analysis, CAN bus architecture (CANaerospace), and FreeRTOS firmware planning
+- GPS telemetry and long-range **LoRa** ground-station communication for real-time tracking and recovery
+
+**Flight Simulation Engineer** · Mar 2026 – Sep 2026
+- **6-DOF trajectory simulation** (RocketPy) predicting apogee within **2%** for a 10,000 ft Spaceport America Cup rocket
+- **Monte Carlo dispersion analysis** across 1,000+ iterations
+- Backwards-physics engine for optimal **airbrake deployment**; ANSYS Fluent CFD drag data turned into lookup tables for the flight computer
+- Python multiprocessing framework that cut design iteration time by **75%**
+
+**L1 Lead Flight Electronics Engineer** · Sep 2024 – Dec 2024
+- Full ESP32 avionics subsystem, from schematic to flight validation: multi-rail PCB power distribution, SMT assembly, hardware bring-up
+- Deterministic bare-metal C++ firmware: **50 Hz acquisition, <2 ms jitter**, BMP280 altimeter over I2C, SPI microSD logging of 20+ flight parameters through apogee and recovery
+
+### NASA Lunabotics Challenge · Electrical Systems Engineer
+- Architected the rover's **triple 3S LiPo power distribution** and voltage regulation for drivebase, compute, and sensors
+- Designed the electrical enclosure for a Jetson Nano and ESP32 control electronics, from schematic through 3D model to physical build
+- Built the **CAN bus** link from the ESP32 to dual SPARK MAX motor controllers; traded a custom transceiver PCB for a manufactured chip to protect the supply chain against tariff constraints
+- Diagnosed and corrected a reversed-polarity wiring fault; led integration and power budgeting; co-authored the NASA **Systems Engineering Paper** and Robot Data Report
+
+### NASA L'SPACE · Two programs
+
+**Mission Concept Academy: CDH Systems Engineer**, lunar south pole rover mission (Aquarius)
+- Designed the full command and data handling architecture through four gate reviews (MCR, SRR, MDR, PDR)
+- Trade study of **RAD750, LEON4FT, and SpaceCube Mini**; selected the RAD750 for radiation hardness and flight heritage
+- Traceable requirements (64 GB storage, 256 kbps X-band downlink, redundant fault recovery); X-band telecom with a **MIL-STD-1553** dual-redundant bus
+
+**NPWEE Academy: Proposal Engineer**, communications, navigation & tracking
+- Authoring a 7-page NASA-format proposal aligned with Technology Areas TX02, TX05, and TX17
+- Researching radio-based tracking of small orbital debris and improved asteroid detection for **NEO Surveyor** via Goldstone Solar System Radar and Vera C. Rubin Observatory integration
+- Member of a NASA Proposal Review Panel evaluating competing proposals
+
+---
+
+## 🧠 Embedded AI & Software
+
+**Senior Design · AI Engineer (Team Nexus 6)**
+Real-time predictive digital twin for multi-rail power distribution: embedded inference on voltage, current, and thermal data to detect component degradation before failure, benchmarked against threshold-based monitoring through accelerated-aging tests. 6-person team; faculty mentor Dr. Marco Tacca.
+
+**IoT & Edge AI Systems** · UTD IoT Laboratory
+- MQTT sensor-to-cloud pipelines on Raspberry Pi with dashboards and actuator control
+- **TinyML** deployment benchmarked against cloud inference (accuracy, latency, memory)
+- Small Language Model **agentic workflows** with tool calling for device management
+- **AWS IoT Core** telemetry ingestion, event-driven alerts, and ML inference
+- 15-week capstone prototype with a live demo and technical poster
+
+**MCP Security Scanner** · GDSC sprint team
+Open-source CLI scanner for Model Context Protocol servers: over-privileged tool permission detection, severity scoring, **SARIF output** for GitHub Code Scanning, and a labeled benchmark corpus of intentionally vulnerable servers.
+
+**Critique AI** · Backend engineer
+AI writing-feedback tool that helps students improve without rewriting for them. Built the Gemini integration, the `/api/analyze` endpoint (retries, validation), and the `/api/extract` PDF/Word extraction endpoint.
+
+---
+
+## ⚡ Digital & Power Design
+
+**48-bit Harvard RISC Processor** · [repo](https://github.com/DanialParviz/48-bit-harvard-risc-processor)
+Custom 48-bit ISA with a multi-cycle Harvard architecture, 13-bit address bus (8,192 locations), ALU, register file, program counter, and FSM control logic. Verified through RTL simulation and waveform analysis in ModelSim/Vivado.
+
+**Wind Energy Power Electronics** · UTD Wind Energy Club
+Three-phase AC-DC rectifier for a wind generator load side: LC filter modeling in LTSpice, MOSFET high-current load switching, and Altium PCB layout, validated with oscilloscope measurements.
+
+---
+
+## 🛠️ Tech Stack
+
+**Languages**
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black)
+![Verilog](https://img.shields.io/badge/Verilog%20%2F%20SystemVerilog-8A2BE2?style=flat-square)
+![VHDL](https://img.shields.io/badge/VHDL-5C6BC0?style=flat-square)
+![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=flat-square)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+
+**FPGA & Digital**
+![Vivado](https://img.shields.io/badge/Vivado-E4002B?style=flat-square)
+![ModelSim](https://img.shields.io/badge/ModelSim-1F6FEB?style=flat-square)
+![Zynq](https://img.shields.io/badge/Zynq%20UltraScale%2B-ED1C24?style=flat-square)
+![PYNQ](https://img.shields.io/badge/PYNQ-F7931E?style=flat-square)
+![AXI4-Lite](https://img.shields.io/badge/AXI4--Lite%20%2F%20DMA-555?style=flat-square)
+
+**Embedded**
+![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white)
+![STM32](https://img.shields.io/badge/STM32-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white)
+![Jetson](https://img.shields.io/badge/Jetson%20Nano-76B900?style=flat-square&logo=nvidia&logoColor=white)
+![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=flat-square&logo=raspberrypi&logoColor=white)
+![PlatformIO](https://img.shields.io/badge/PlatformIO-F5822A?style=flat-square&logo=platformio&logoColor=white)
+![FreeRTOS](https://img.shields.io/badge/FreeRTOS-6DB33F?style=flat-square)
+
+**Protocols:** `SPI` · `I2C` · `UART` · `CAN` · `LoRa` · `MQTT` · `MIL-STD-1553`
+
+**PCB & Analysis**
+![Altium](https://img.shields.io/badge/Altium-F5A800?style=flat-square)
+![KiCad](https://img.shields.io/badge/KiCad-314CB0?style=flat-square&logo=kicad&logoColor=white)
+![LTSpice](https://img.shields.io/badge/LTSpice-444?style=flat-square)
+![ANSYS Fluent](https://img.shields.io/badge/ANSYS%20Fluent-FFB71B?style=flat-square)
+![RocketPy](https://img.shields.io/badge/RocketPy-D33?style=flat-square)
+
+**Software & Cloud**
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![AWS IoT](https://img.shields.io/badge/AWS%20IoT%20Core-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
+
+---
+
+## 🏆 Recognition & More
+
+- President's Education Award · Certificate of Congressional Recognition
+- Languages: English, Persian (native/bilingual)
+- Co-founder, **UTD Backgammon Club**: campus tournaments and community events
+- Division II collegiate rugby athlete
+- Member, IEEE
+
+---
+
+<p align="center">
+  <i>Open to opportunities in embedded systems, FPGA engineering, avionics, and aerospace/defense.</i><br>
+  <a href="https://www.linkedin.com/in/danial-parviz-5075a2212/">LinkedIn</a> ·
+  <a href="mailto:dxp210034@utdallas.edu">dxp210034@utdallas.edu</a>
+</p>
