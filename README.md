@@ -1,7 +1,7 @@
 <h1 align="center">Danial Parviz</h1>
 
 <p align="center">
-  <b>Computer Engineering @ UT Dallas</b> · Class of May 2027 · 2x NASA L'SPACE Alumnus<br>
+  <b>Computer Engineering @ UT Dallas</b> · Class of May 2027 · NASA L'SPACE Alumnus<br>
   Embedded systems · FPGA acceleration · Avionics · Hardware-software integration
 </p>
 
@@ -26,7 +26,6 @@ aerospace/defense.
 |---|---|---|
 | 🔧 | Python runtime for a Zynq UltraScale+ FPGA accelerator *(private lab repo)* | EACAS Lab, UTD |
 | 🚀 | Level 3 rocket flight computer and GPS/LoRa telemetry | AIAA Comet Rocketry |
-| 🛰️ | Communications, navigation & tracking proposal (orbital debris, NEO Surveyor) | NASA L'SPACE NPWEE |
 | 🕶️ | Offline AI smart-glasses navigation system for the visually impaired | Senior Design (Blind Assistance Navigator) |
 | 🔒 | Open-source MCP server security scanner | GDSC sprint team |
 | 🌐 | End-to-end IoT / edge AI capstone | UTD IoT Laboratory |
@@ -70,17 +69,11 @@ aerospace/defense.
 - Built the **CAN bus** link from the ESP32 to dual SPARK MAX motor controllers; traded a custom transceiver PCB for a manufactured chip to protect the supply chain against tariff constraints
 - Diagnosed and corrected a reversed-polarity wiring fault; led integration and power budgeting; co-authored the NASA **Systems Engineering Paper** and Robot Data Report
 
-### NASA L'SPACE · Two programs
-
-**Mission Concept Academy: CDH Systems Engineer**, lunar south pole rover mission (Aquarius)
+### NASA L'SPACE Mission Concept Academy · CDH Systems Engineer
+*Lunar south pole rover mission (Aquarius)*
 - Designed the full command and data handling architecture through four gate reviews (MCR, SRR, MDR, PDR)
 - Trade study of **RAD750, LEON4FT, and SpaceCube Mini**; selected the RAD750 for radiation hardness and flight heritage
 - Traceable requirements (64 GB storage, 256 kbps X-band downlink, redundant fault recovery); X-band telecom with a **MIL-STD-1553** dual-redundant bus
-
-**NPWEE Academy: Proposal Engineer**, communications, navigation & tracking
-- Authoring a 7-page NASA-format proposal aligned with Technology Areas TX02, TX05, and TX17
-- Researching radio-based tracking of small orbital debris and improved asteroid detection for **NEO Surveyor** via Goldstone Solar System Radar and Vera C. Rubin Observatory integration
-- Member of a NASA Proposal Review Panel evaluating competing proposals
 
 ---
 
