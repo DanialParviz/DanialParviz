@@ -27,7 +27,7 @@ aerospace/defense.
 | 🔧 | Python runtime for a Zynq UltraScale+ FPGA accelerator *(private lab repo)* | EACAS Lab, UTD |
 | 🚀 | Level 3 rocket flight computer and GPS/LoRa telemetry | AIAA Comet Rocketry |
 | 🛰️ | Communications, navigation & tracking proposal (orbital debris, NEO Surveyor) | NASA L'SPACE NPWEE |
-| 🧠 | Embedded predictive digital twin for multi-rail power systems | Senior Design (Team Nexus 6) |
+| 🕶️ | Offline AI smart-glasses navigation system for the visually impaired | Senior Design (Blind Assistance Navigator) |
 | 🔒 | Open-source MCP server security scanner | GDSC sprint team |
 | 🌐 | End-to-end IoT / edge AI capstone | UTD IoT Laboratory |
 
@@ -52,20 +52,17 @@ aerospace/defense.
 
 ### AIAA Comet Rocketry · UT Dallas
 
-**L3 Flight Computer & GPS Systems Engineer** · Fall 2026 – Present
-- Researching and proposing an upgraded flight computer around the **STM32H743 (Cortex-M7)**: hardware FPU for Kalman-filter sensor fusion, integrated FDCAN, and dedicated SPI buses to move sensors off a shared I2C bus
+**Flight Computer & GPS Systems Engineer** · Sep 2024 – Present
+- Led end-to-end avionics for a high-powered **L1 certification rocket**: full ESP32 subsystem from schematic to flight validation, multi-rail PCB power distribution, SMT assembly, and hardware bring-up — deterministic bare-metal C++ firmware achieving **50 Hz acquisition, <2 ms jitter**, BMP280 altimeter over I2C, SPI microSD logging of 20+ flight parameters through apogee and recovery
+- Advanced to the team's current **L3 program**, researching and proposing an upgraded flight computer around the **STM32H743 (Cortex-M7)**: hardware FPU for Kalman-filter sensor fusion, integrated FDCAN, and dedicated SPI buses to move sensors off a shared I2C bus
 - Sensor suite selection, **IREC 2026 DTEG** compliance analysis, CAN bus architecture (CANaerospace), and FreeRTOS firmware planning
-- GPS telemetry and long-range **LoRa** ground-station communication for real-time tracking and recovery
+- GPS telemetry and long-range **LoRa** ground-station communication for real-time tracking and recovery, across both rocket programs
 
 **Flight Simulation Engineer** · Mar 2026 – Sep 2026
 - **6-DOF trajectory simulation** (RocketPy) predicting apogee within **2%** for a 10,000 ft Spaceport America Cup rocket
 - **Monte Carlo dispersion analysis** across 1,000+ iterations
 - Backwards-physics engine for optimal **airbrake deployment**; ANSYS Fluent CFD drag data turned into lookup tables for the flight computer
 - Python multiprocessing framework that cut design iteration time by **75%**
-
-**L1 Lead Flight Electronics Engineer** · Sep 2024 – Dec 2024
-- Full ESP32 avionics subsystem, from schematic to flight validation: multi-rail PCB power distribution, SMT assembly, hardware bring-up
-- Deterministic bare-metal C++ firmware: **50 Hz acquisition, <2 ms jitter**, BMP280 altimeter over I2C, SPI microSD logging of 20+ flight parameters through apogee and recovery
 
 ### NASA Lunabotics Challenge · Electrical Systems Engineer
 - Architected the rover's **triple 3S LiPo power distribution** and voltage regulation for drivebase, compute, and sensors
@@ -89,8 +86,8 @@ aerospace/defense.
 
 ## 🧠 Embedded AI & Software
 
-**Senior Design · AI Engineer (Team Nexus 6)**
-Real-time predictive digital twin for multi-rail power distribution: embedded inference on voltage, current, and thermal data to detect component degradation before failure, benchmarked against threshold-based monitoring through accelerated-aging tests. 6-person team; faculty mentor Dr. Marco Tacca.
+**Senior Design · Embedded AI & Systems Engineer — Blind Assistance Navigator**
+Offline-first AI smart-glasses navigation system for individuals with visual impairments. Designing a modular wearable (NVIDIA Jetson Orin Nano, FPGA acceleration, stereo-depth cameras, custom STM32 hardware) with a real-time perception pipeline (PyTorch, CUDA, TensorRT) fusing object detection, depth estimation, ToF proximity sensing, IMU, and GPS. Exploring quantized vision-language models for offline scene understanding, and planning FPGA-based depth-map filtering (Vitis HLS/RTL) benchmarked against a CPU baseline. 6-person interdisciplinary team.
 
 **IoT & Edge AI Systems** · UTD IoT Laboratory
 - MQTT sensor-to-cloud pipelines on Raspberry Pi with dashboards and actuator control
@@ -130,20 +127,28 @@ Three-phase AC-DC rectifier for a wind generator load side: LC filter modeling i
 
 **FPGA & Digital**
 ![Vivado](https://img.shields.io/badge/Vivado-E4002B?style=flat-square)
+![Vitis HLS](https://img.shields.io/badge/Vitis%20HLS-E4002B?style=flat-square)
 ![ModelSim](https://img.shields.io/badge/ModelSim-1F6FEB?style=flat-square)
 ![Zynq](https://img.shields.io/badge/Zynq%20UltraScale%2B-ED1C24?style=flat-square)
 ![PYNQ](https://img.shields.io/badge/PYNQ-F7931E?style=flat-square)
 ![AXI4-Lite](https://img.shields.io/badge/AXI4--Lite%20%2F%20DMA-555?style=flat-square)
 
+**AI & Edge Inference**
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![CUDA](https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white)
+![TensorRT](https://img.shields.io/badge/TensorRT-76B900?style=flat-square&logo=nvidia&logoColor=white)
+![VLMs](https://img.shields.io/badge/Vision--Language%20Models-555?style=flat-square)
+
 **Embedded**
 ![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white)
-![STM32](https://img.shields.io/badge/STM32-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white)
-![Jetson](https://img.shields.io/badge/Jetson%20Nano-76B900?style=flat-square&logo=nvidia&logoColor=white)
+![STM32H743](https://img.shields.io/badge/STM32H743-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white)
+![Jetson](https://img.shields.io/badge/Jetson%20Orin%20Nano%20%2F%20Nano-76B900?style=flat-square&logo=nvidia&logoColor=white)
 ![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=flat-square&logo=raspberrypi&logoColor=white)
+![Embedded Linux](https://img.shields.io/badge/Embedded%20Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![PlatformIO](https://img.shields.io/badge/PlatformIO-F5822A?style=flat-square&logo=platformio&logoColor=white)
 ![FreeRTOS](https://img.shields.io/badge/FreeRTOS-6DB33F?style=flat-square)
 
-**Protocols:** `SPI` · `I2C` · `UART` · `CAN` · `LoRa` · `MQTT` · `MIL-STD-1553`
+**Protocols:** `SPI` · `I2C` · `UART` · `CAN` · `FDCAN` · `LoRa` · `MQTT` · `MIL-STD-1553`
 
 **PCB & Analysis**
 ![Altium](https://img.shields.io/badge/Altium-F5A800?style=flat-square)
