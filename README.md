@@ -37,11 +37,10 @@ aerospace/defense.
 ### EACAS Lab, UT Dallas · Undergraduate Research Assistant
 *Efficient AI Computing and Accelerator Systems, under Dr. Mohamed Ibrahim*
 
-- Lead the **ARM-side Python runtime** for a Zynq UltraScale+ ZCU102 FPGA accelerator used in a real-time turbulence digital twin: AXI4-Lite register access, DMA (MM2S/S2MM) data movement, kernel table loading, timeout handling, and typed error surfaces
-- Built a **software mock backend** (register file, kernel-load state machine, DMA loopback, failure injection) so the full pipeline could be developed before hardware access
-- **8 pull requests, 2,500+ lines** of production Python; test suite grown from **0 to 30** unit and integration tests
-- Numerical validation against **DOLFIN (FEniCS)** and **Incompact3d** at **2×10⁻⁵ relative L2 tolerance** across Kolmogorov flow and cylinder wake cases
-- Adapted the runtime through a mid-project data format change with zero regressions; authored developer docs for hardware integration
+- Lead the **ARM-side Python runtime** and a **software mock backend** (register file, kernel-load state machine, DMA loopback, failure injection) for a Zynq UltraScale+ ZCU102 FPGA accelerator used in a real-time turbulence digital twin: AXI4-Lite register access, DMA (MM2S/S2MM) data movement, kernel table loading, and failure-injection testing decoupled from physical hardware
+- **8 pull requests, 2,500+ lines** of production Python; test suite grown from **0 to 30** unit and integration tests; numerical validation against **DOLFIN (FEniCS)** and **Incompact3d** at **2×10⁻⁵ relative L2 tolerance**
+- Transitioning with the lab's **Fall 2026 pivot** to an event-triggered turbulence digital twin direction — co-authoring **RAPHAT**, a research manuscript targeting DAC on a reconfigurable FPGA architecture that derives its kernels directly from the governing PDE and reconfigures on-device as the physical system changes state
+- Conducted a literature review of FPGA-accelerated PDE solvers (spectral/FFT methods, lattice Boltzmann, algebraic multigrid, dynamic partial reconfiguration) and synthesized a state-transition-to-hardware-mechanism mapping informing the paper's reconfigurable datapath and hardware co-design
 
 *Code lives in a private lab repository; the team is working toward publication.*
 
