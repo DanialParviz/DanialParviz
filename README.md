@@ -28,7 +28,7 @@ aerospace/defense.
 | 🚀 | Level 3 rocket flight computer and GPS/LoRa telemetry | AIAA Comet Rocketry |
 | 🕶️ | Offline AI smart-glasses navigation system for the visually impaired | Senior Design (Blind Assistance Navigator) |
 | 🔒 | Open-source MCP server security scanner | GDSC sprint team |
-| 🌐 | End-to-end IoT / edge AI capstone | UTD IoT Laboratory |
+| 🌐 | Raspberry Pi 5 edge AI/IoT system: sensors, TinyML, face recognition, local SLM agent, AWS | UTD IoT Laboratory |
 
 ---
 
@@ -81,12 +81,13 @@ aerospace/defense.
 **Senior Design · Embedded AI & Systems Engineer — Blind Assistance Navigator**
 Offline-first AI smart-glasses navigation system for individuals with visual impairments. Designing a modular wearable (NVIDIA Jetson Orin Nano, FPGA acceleration, stereo-depth cameras, custom STM32 hardware) with a real-time perception pipeline (PyTorch, CUDA, TensorRT) fusing object detection, depth estimation, ToF proximity sensing, IMU, and GPS. Exploring quantized vision-language models for offline scene understanding, and planning FPGA-based depth-map filtering (Vitis HLS/RTL) benchmarked against a CPU baseline. 6-person interdisciplinary team.
 
-**IoT & Edge AI Systems** · UTD IoT Laboratory
-- MQTT sensor-to-cloud pipelines on Raspberry Pi with dashboards and actuator control
-- **TinyML** deployment benchmarked against cloud inference (accuracy, latency, memory)
-- Small Language Model **agentic workflows** with tool calling for device management
-- **AWS IoT Core** telemetry ingestion, event-driven alerts, and ML inference
-- 15-week capstone prototype with a live demo and technical poster
+**IoT & Edge AI Systems Engineer** · UTD IoT Laboratory — 3-person team
+Raspberry Pi 5 edge AI/IoT system reading distance (VL53L0X), temperature (BME680), and camera (IMX708) data, deciding locally, and syncing to AWS.
+- Sensors → **TinyDB** local storage → local **Mosquitto MQTT** broker (GPIO LED actuators + Discord alerts, fully offline-capable) and **AWS IoT Core** (mTLS) → **DynamoDB**
+- On-device **TinyML** object detection (EfficientDet-Lite0/MediaPipe) and face recognition (YuNet + EdgeFace XS, PyTorch), published to AWS alongside raw telemetry
+- Combined AI agent running a local **Qwen2.5-3B** SLM (**llama.cpp**) that reads recent sensor/vision records and writes a human-readable system summary — Python keeps all exact counts/math, the model only writes sentences
+- Prototyped **LangChain/LangGraph** tool-calling agents as a next step toward an on-device agent; designed an offline-resilience queue so local sensing and actuator control keep working without internet
+- 15-week capstone, live demo and technical poster; private team repo
 
 **MCP Security Scanner** · GDSC sprint team
 Open-source CLI scanner for Model Context Protocol servers: over-privileged tool permission detection, severity scoring, **SARIF output** for GitHub Code Scanning, and a labeled benchmark corpus of intentionally vulnerable servers.
@@ -154,6 +155,11 @@ Three-phase AC-DC rectifier for a wind generator load side: LC filter modeling i
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![AWS IoT](https://img.shields.io/badge/AWS%20IoT%20Core-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
+![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white)
+![MQTT](https://img.shields.io/badge/MQTT%20%2F%20Mosquitto-3C5280?style=flat-square&logo=eclipsemosquitto&logoColor=white)
+![llama.cpp](https://img.shields.io/badge/llama.cpp%20%2F%20Qwen2.5-000000?style=flat-square)
+![LangChain](https://img.shields.io/badge/LangChain%20%2F%20LangGraph-1C3C3C?style=flat-square)
+![TinyML](https://img.shields.io/badge/TinyML-00ADD8?style=flat-square)
 ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
 
 ---
